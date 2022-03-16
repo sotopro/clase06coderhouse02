@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         marginVertical: margin.medium,
-        color: colors.text,
+        color: colors.primaryText,
     },
     inputContainer: {
         flex: 1,
@@ -18,10 +18,10 @@ export const styles = StyleSheet.create({
         marginHorizontal: margin.medium,
     },
     label: {
-        fontSize: fontSize.text,
+        fontSize: fontSize.primaryText,
         fontWeight: 'bold',
-        color: colors.text,
-        marginBottom: margin.small4,
+        color: colors.primaryText,
+        marginBottom: margin.small,
         justifyContent: 'center',
         alignSelf: 'center',
     },

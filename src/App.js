@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import {
   SafeAreaView,
-  Platform
 } from 'react-native';
-import StartGameScreen from './screens/start-game-screen';
-import GameScreen from './screens/game-screen';
+import StartGameScreen from './screens/start-game-screen/index';
+import GameScreen from './screens/game-screen/index';
 import { styles } from './styles';
 
 

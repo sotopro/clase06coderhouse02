@@ -13,7 +13,7 @@ import Header from '../../components/header';
 import Card from '../../components/card';
 import Input from '../../components/input';
 import { styles } from './styles';
-
+import useOrientation from '../../hooks/use-orientation';
 
 const isIOS = Platform.OS === 'ios';
 
@@ -22,6 +22,9 @@ const StartGameScreen = ({ onStartGame }) => {
     const [inputValue, setInputValue] = useState('');
     const [confirmed, setConfirmed] = useState(false);
     const [selectedNumber, setSelectedNumber] = useState('');
+    const orientation = useOrientation();
+
+    console.warn(orientation.width)
     
     const handleOnChange = (text) => {
         setInputValue(text.replace(/[^0-9]/g, ''));

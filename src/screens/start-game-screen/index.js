@@ -23,6 +23,7 @@ const StartGameScreen = ({ onStartGame }) => {
     const [inputValue, setInputValue] = useState('');
     const [confirmed, setConfirmed] = useState(false);
     const [selectedNumber, setSelectedNumber] = useState('');
+
     
     const handleOnChange = (text) => {
         setInputValue(text.replace(/[^0-9]/g, ''));

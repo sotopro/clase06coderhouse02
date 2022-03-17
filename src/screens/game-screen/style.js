@@ -10,6 +10,9 @@ export const styles = StyleSheet.create({
     cardContainer: {
         height: height * 0.35,
     },
+    cardContainerLandscape: {
+        height: height * 0.5,
+    },
     confirmedText: {
         fontSize: fontSize.large,
         fontWeight: 'bold',

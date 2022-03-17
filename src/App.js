@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import {
   SafeAreaView,
-  Platform
 } from 'react-native';
 import StartGameScreen from './screens/start-game-screen';
 import GameScreen from './screens/game-screen';
 import GameOverScreen from './screens/game-over-screen';
 import { styles } from './styles';
-
 
 const App = () => {
   const [userNumber, setUserNumber] = useState();
@@ -25,6 +23,7 @@ const App = () => {
     setGuessRounds(0);
     setUserNumber(null)
   }
+
 
   let content = <StartGameScreen onStartGame={handleStartGame}/>
 

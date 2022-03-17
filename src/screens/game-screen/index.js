@@ -3,8 +3,10 @@ import { View, Text, Button, Alert } from 'react-native'
 import { styles } from './style'
 import Card from '../../components/card'
 import Header from '../../components/header'
+import useOrientation from '../../hooks/use-orientation'
 
 const GameScreen = ({ userOptions, onGameOver }) => {
+    const orientation = useOrientation()
     const generateRandomBetween = useCallback((min, max, exclude) => {
         min = Math.ceil(min);
         max = Math.floor(max);
@@ -44,7 +46,7 @@ const GameScreen = ({ userOptions, onGameOver }) => {
     return (
         <View style={styles.container}>
             <Header title='Juego Iniciado' />
-            <Card style={styles.cardContainer}>
+            <Card style={orientation?.isPortrait ? styles.cardContainer : styles.cardContainerLandscape}>
                 <Text style={styles.cardTitle}>La suposición del oponentes</Text>
                 <Text style={styles.confirmedText}>{currentGuess}</Text>
                 <View style={styles.buttonsContainer}>
